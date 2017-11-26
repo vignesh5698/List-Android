@@ -15,12 +15,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
-    Details d=new Details();
+
     List<Details> obj=new ArrayList<Details>();
     ArrayAdapter<Details> adapter=null;
     EditText name,addr;
-    RadioGroup rg=(RadioGroup)findViewById(R.id.rg);
-    ListView list=(ListView)findViewById(R.id.lv);
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,12 +29,10 @@ public class MainActivity extends AppCompatActivity {
         b.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Details d=new Details();
                 d.setName(name.getText().toString());
                 d.setAddress(addr.getText().toString());
-
-                adapter=new ArrayAdapter<Details>(MainActivity.this,android.R.layout.simple_list_item_1,obj);
-                list.setAdapter(adapter);
+                RadioGroup rg=(RadioGroup)findViewById(R.id.rg);
                 switch (rg.getCheckedRadioButtonId()){
                     case R.id.be:
                         d.setDegree("B.E");
@@ -44,9 +40,14 @@ public class MainActivity extends AppCompatActivity {
                     case R.id.btech:
                         d.setDegree("B.Tech");
                         break;
-                }
-                adapter.add(d);
+                }                adapter.add(d);
+
             }
         });
+        ListView list=(ListView)findViewById(R.id.lv);
+        adapter=new ArrayAdapter<Details>(MainActivity.this,android.R.layout.simple_list_item_1,obj);
+        list.setAdapter(adapter);
+
+
     }
 }

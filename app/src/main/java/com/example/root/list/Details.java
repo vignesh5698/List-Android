@@ -30,6 +30,7 @@ public class Details {
     }
     public String toString() {
         return(getName());
+        //return (getDegree());
     }
 
     private String name="",address="",degree="";
