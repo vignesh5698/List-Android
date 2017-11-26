@@ -24,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Button b=(Button)findViewById(R.id.btn1);
+        Button b1=(Button)findViewById(R.id.bt2);
         name=(EditText)findViewById(R.id.name);
         addr=(EditText)findViewById(R.id.addr);
         b.setOnClickListener(new View.OnClickListener() {
@@ -48,6 +49,11 @@ public class MainActivity extends AppCompatActivity {
         adapter=new ArrayAdapter<Details>(MainActivity.this,android.R.layout.simple_list_item_1,obj);
         list.setAdapter(adapter);
 
+        b1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
 
+            }
+        });
     }
 }

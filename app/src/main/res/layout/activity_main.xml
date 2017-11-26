@@ -29,11 +29,14 @@
                  android:id="@+id/btech"
                  android:text="B.Tech"/>
 
+
         </RadioGroup>
 
     </TableRow>
     <Button android:id="@+id/btn1"
         android:text="Save"/>
+    <Button android:text="NEXT"
+        android:id="@+id/bt2"/>
     <ListView android:layout_height="wrap_content"
         android:layout_width="fill_parent"
         android:id="@+id/lv"
