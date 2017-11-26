@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    tools:context="com.example.root.list.MainActivity"
+    android:stretchColumns="1">
+<TableRow>
+    <TextView android:text="NAME:" />
+    <EditText android:id="@+id/name"/>
+
+</TableRow>
+<TableRow>
+    <TextView android:text="ADDRESS" />
+    <EditText android:id="@+id/addr"/>
+</TableRow>
+    <TableRow>
+<TextView android:text="Degree:"/>
+        <RadioGroup android:id="@+id/rg">
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="B.E"
+                android:id="@+id/be"/>
+             <RadioButton
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:id="@+id/btech"
+                 android:text="B.Tech"/>
+
+        </RadioGroup>
+
+    </TableRow>
+    <Button android:id="@+id/btn1"
+        android:text="Save"/>
+    <ListView android:layout_height="wrap_content"
+        android:layout_width="fill_parent"
+        android:id="@+id/lv"
+        android:layout_above="@+id/name">
+
+    </ListView>
+</TableLayout>
